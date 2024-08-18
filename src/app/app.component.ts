@@ -13,6 +13,11 @@ export interface Server {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  appStatus = new Promise((resolve, reject)=>{
+    setTimeout(() => {
+      resolve('stable')
+    }, 2000);
+  })
   filterServerStatus: string = '';
   servers = [
     {
