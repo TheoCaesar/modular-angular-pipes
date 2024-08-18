@@ -40,6 +40,14 @@ export class AppComponent {
       started: new Date(2012, 3, 19, 21, 45, 18)
     }
   ];
+  addServer(){
+    this.servers.push({
+      instanceType : 'small',
+      name: 'New Server',
+      status: 'stable',
+      started: new Date(2023, 10, 140)
+    })
+  }
   getStatusClasses(server: Server) {
     return {
       'list-group-item-success': server.status === 'stable',

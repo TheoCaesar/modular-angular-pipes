@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
+    pure:false,
     name:"truncate" //template variable to invoke use in template
 })
 export class ShortenPipe implements PipeTransform {
